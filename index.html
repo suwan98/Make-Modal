@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>  
+    <h1 id="heading">제목입니다</h1>
+    <p>내용입니다</p>
+    <p>내용입니다</p>
+    <p>내용입니다</p>
+    <button>수정하기</button><br />
+    <button onclick="modalOpenAndClose('block')">삭제하기</button>
+
+    <div class="modalDiv">
+        <div class="bg" onclick="modalOpenAndClose('none')"></div>
+        <div class="modal">
+            <p>정말 삭제하시겠습니까?</p>
+            <button onclick="modalOpenAndClose('none')">취소하기</button>
+            <button>삭제하기</button>
+        </div>
+    </div>
+
+    <script>
+        function modalOpenAndClose(Argument){
+            var 모달 = document.querySelector(".modalDiv");
+            모달.style.display = Argument;
+        };
+    </script>
+</body>
+</html>
